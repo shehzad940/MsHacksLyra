@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Incubate IND Management</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	<link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.teal-green.min.css" />
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script src="script.js"></script>
+</head>
+<body>
+	<div id="loader" style="display: none;">
+		<div class="preloader-wrapper big active">
+		    <div class="spinner-layer spinner-blue-only">
+		      <div class="circle-clipper left">
+		        <div class="circle"></div>
+		      </div><div class="gap-patch">
+		        <div class="circle"></div>
+		      </div><div class="circle-clipper right">
+		        <div class="circle"></div>
+		      </div>
+		    </div>
+		</div>
+	</div>
+
+
+	<div class="mdl-layout mdl-js-layout">
+        <div id="login-conatiner" class="mdl-card mdl-shadow--16dp">
+            <div class="mdl-card__supporting-text">
+            	<div id="login-fab" class="mdl-color--accent mdl-color-text--white">
+					<i id="lock-icon" class="material-icons">lock</i>
+				</div>
+				<div id="card-heading">
+					User Login
+				</div>
+                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                    <input class="mdl-textfield__input" id="first_name" name="first_name" type="text" />
+                    <label class="mdl-textfield__label" for="first_name">First Name</label>
+                </div>
+                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                    <input class="mdl-textfield__input" id="last_name" name="last_name" type="text" />
+                    <label class="mdl-textfield__label" for="last_name">Last Name</label>
+                </div>
+                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                    <input class="mdl-textfield__input" id="email" name="email" type="email" required="" />
+                    <label class="mdl-textfield__label" for="">Email</label>
+                </div>
+                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                    <input class="mdl-textfield__input" type="password" name="password" id="password"/>
+                    <label class="mdl-textfield__label" for="password">Password</label>
+                </div>
+                 <button id="login-button" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored mdl-color-text--white">Login</button>
+            </div>
+            <div class="mdl-card__actions">
+            	<button  type="button" id="goto_register" class="mdl-button mdl-js-button mdl-button--primary">Register</button>
+            	<button id='forgotpassword' class="mdl-button mdl-js-button mdl-button--primary">Forgot Password</button>
+            </div>
+        </div>
+	</div>
+
+
+	<div class="container" style="display: none;">
+	 <div class="row">
+	    <form class="col s12" id="register_form">
+	      	<div>
+	      		<h2 align="center">Campus Ambassador Registration</h2>
+	      	</div>
+	      	<br />
+	        <div class="input-field col s6">
+	            <input id="reg_fname" name="first_name" type="text" class="validate" required="">
+	            <label for="reg_fname">First Name</label>
+	        </div>
+	        <div class="input-field col s6">
+	            <input id="reg_lname" name="last_name" type="text" class="validate" required="">
+	            <label for="reg_lname">Last Name</label>
+	        </div>
+	        <div class="input-field col s12">
+	            <input id="reg_email" name="email" type="email" class="validate" required="">
+	            <label for="reg_email">Email</label>
+	        </div>
+	        <div class="input-field col s12">
+	            <input id="reg_password" name="password" type="password" class="validate" required="">
+	            <label for="reg_password">Password</label>
+	        </div>
+	        <div class="input-field col s12">
+	            <input id="reg_mobile" name="mobile" type="text" class="validate" required="">
+	            <label for="reg_mobile">Mobile Number</label>
+	        </div>
+	        <div class="input-field col s12">
+	            <input id="reg_college" name="university" type="text" class="validate" required="">
+	            <label for="reg_college">College</label>
+	        </div>
+	        <div class="input-field col s12">
+	            <input id="reg_address" name="address" type="text" class="validate" required="">
+	            <label for="reg_address">Address</label>
+	        </div>
+	        <div class="input-field col s12">
+		        <button type="submit" class="waves-effect waves-light btn" id="register">Register</button>
+		        <a class="waves-effect waves-light btn" id="goto_login">Goto Login</a>
+		    </div>
+	    </form>
+
+
+	    <form class="col s12" id="login_form" style="display: none;">
+	        <div>
+	      	    <h2 align="center">Login Here</h2>
+	        </div>
+	      	<br />
+	        <div class="row">
+	        <div class="input-field col s12">
+	            <input id="login_email" name="email" type="email" class="validate">
+	            <label for="login_email">Email</label>
+	        </div>
+	        <div class="input-field col s12">
+	            <input id="login_password" name="password" type="password" class="validate">
+	            <label for="login_password">Password</label>
+	        </div>
+	        <div class="input-field col s12">
+		        <button type="submit" class="waves-effect waves-light btn" id="login">Login</button>
+		        <a class="waves-effect waves-light btn" id="goto_register">Goto Register</a>
+		    </div>
+	    </form>
+	  </div>
+	</div>
+	<script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+
+</body>
+</html>
